@@ -65,7 +65,7 @@ import subprocess
 print("\nRunning the generated code...\n")
 
 result = subprocess.run(
-    ["python", "project/generated_code.py"],
+    ["python", "projects/generated_code.py"],
     capture_output=True,
     text=True
 )
@@ -76,7 +76,7 @@ for attempt in range(3):
     print(f"\n🔄 Attempt {attempt + 1} of 3")
 
     result = subprocess.run(
-        ["python", "project/generated_code.py"],
+        ["python", "projects/generated_code.py"],
         capture_output=True,
         text=True
     )
@@ -88,7 +88,7 @@ for attempt in range(3):
 
 
     review = ollama.chat(
-        model="qwen2.5-coder:7b",
+        model="qwen2.5-coder:1.5b",
         messages=[
             {
                 "role": "system",
