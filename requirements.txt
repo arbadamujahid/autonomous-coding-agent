@@ -1,5 +1,5 @@
 requirements.txt
 
-streamlit
-ollama
+streamlit==1.64.0
+ollama==0.6.2
 mcp
